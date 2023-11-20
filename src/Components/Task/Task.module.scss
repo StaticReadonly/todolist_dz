@@ -1,0 +1,50 @@
+@import '../../App/App.module.scss';
+
+.taskContainer{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    align-items: center;
+    gap: 10px;
+}
+
+.taskContainer:hover > .taskControlButtons{
+    opacity: 1;
+}
+
+.taskText{
+    display: flex;
+    flex-grow: 1;
+    overflow-x: hidden;
+    align-items: center;
+    font-size: 20px;
+    color: black;
+    overflow-wrap: anywhere;
+}
+
+.taskTextStrike{
+    color: gray;
+    text-decoration: line-through;
+}
+
+.taskControlButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 150ms linear;
+    height: 50%;
+}
+
+.taskControlButtons > svg{
+    @extend .buttonDefault;
+    display: flex;
+    aspect-ratio: 1/1;
+    height: 100%;
+    color: gray;
+}
+
+.taskControlButtons > svg:hover{
+    color: black;
+}

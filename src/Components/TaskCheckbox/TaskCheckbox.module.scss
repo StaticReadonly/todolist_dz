@@ -1,0 +1,23 @@
+@import '../SearchBar/SearchBar.module.scss';
+@import '../../App/App.module.scss';
+
+.taskCheckbox{
+    @extend .buttonDefault;
+    height: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    border: 2px solid $color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taskCheckbox > svg{
+    color: white;
+    width: 60%;
+    height: 60%;
+}
+
+.taskCheckboxChecked{
+    background-color: $color;
+}

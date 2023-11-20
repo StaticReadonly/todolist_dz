@@ -1,0 +1,44 @@
+$color: rgb(23, 188, 209);
+$outlineColor: rgba(23, 188, 209, 0.5);
+$border: 2px solid $color;
+$borderRadius: 6px;
+
+.searchBarDefault{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: $border;
+    border-radius: $borderRadius;
+    padding: 8px;
+    transition: outline linear 150ms;
+    outline: 2px solid transparent;
+}
+
+.searchBar{
+    @extend .searchBarDefault;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.searchBarFocus{
+    outline: 2px solid $outlineColor;
+}
+
+.searchBar > input{
+    border: none;
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    color: $color;
+}
+.searchBar > input:focus{
+    outline: none;
+}
+
+.searchBar > svg{
+    display: flex;
+    height: 100%;
+    aspect-ratio: 1/1;
+    stroke-width: 2px;
+    color: $color;
+}

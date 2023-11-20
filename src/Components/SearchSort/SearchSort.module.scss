@@ -1,0 +1,65 @@
+@import '../SearchBar/SearchBar.module.scss';
+@import '../../App/App.module.scss';
+
+.searchSort{
+    @extend .buttonDefault;
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    border-radius: $borderRadius;
+    padding: 6px;
+    background-color: $color;
+    color: white;
+    align-items: stretch;
+    width: 120px;
+}
+
+.searchSortMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchSortDrop{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border: $border;
+    border-radius: $borderRadius;
+    transform: translate(0, 0.5em);
+    width: 120px;
+    z-index: 2;
+}
+
+.searchSortDropAligner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchSortText{
+    text-overflow: ellipsis;
+    display: flex;
+    width: 85%;
+    overflow-x: hidden;
+}
+
+.searchSortArrow{
+    display: flex;
+    height: 100%;
+    stroke-width: 2px;
+    color: white;
+}
+
+.searchSortArrowDrop{
+    transform: rotate(180deg);
+}
+
+.sortDropItem{
+    display: flex;
+    color: $color;
+}
+.sortDropItem:hover{
+    background-color: $outlineColor;
+}
